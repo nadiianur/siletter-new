@@ -1,0 +1,103 @@
+.btn-add{
+    border-radius: 8px;
+}
+
+thead{
+    background-color: #BDC6CD;
+}
+
+.btn-danger, .btn-warning, .btn-primary{
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    border-radius: 24px;
+    margin-left: 4px;
+}
+
+.btn-inmodal{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.input-div{
+  border-radius: 16px;
+  background-color: #EBEBEB; 
+  height: 50px; 
+  border: none;
+}
+
+.btn-secondary{
+    background-color: #BDC6CD;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    border-radius: 24px;
+    margin-left: 4px;
+    border: none;
+}
+
+.btn-success{
+    background-color: #56DC35;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    border-radius: 24px;
+    margin-left: 4px;
+    border: none;
+}
+
+.btn-warning{
+    background-color: #FFCE21;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    border-radius: 24px;
+    margin-left: 4px;
+    border: none;
+}
+
+.sukses{
+    background: white;
+    font-size: 14px;
+    color: green;
+    font-weight: 500;
+    border-radius: 24px;
+    margin-left: 4px;
+    border-style:groove;
+}
+
+.active-nav {
+    position: relative;
+}
+
+.active-nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color:#356C72;
+}
+
+.nav-link{
+    color: black;
+}
+
+.btn-login{
+    background-color: #FA5F00;
+    border-radius: 30px;
+    color:white;
+    width: 100px; 
+    font-weight:700;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-green {
+    color: green;
+}

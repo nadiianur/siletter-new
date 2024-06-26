@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <title>Surat Balasan</title>
+    <link rel="stylesheet" href="/css/admin/dashboard.css">
+    <link rel="stylesheet" href="/css/admin/divisi.css">
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text mt-2">
+                <span class="image">
+                    <img src="/img/5.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="name">Siletter</span>
+                    <span class="subname">Sistem Surat Menyurat</span>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right toggle"></i>
+        </header>
+        <div class="menu-bar mt-4">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dashboardSekda">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="suratMasukSekda">
+                            <img class="base64"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA6klEQVR4nO2UQQrCMBBFi3UnvYG9RHsJxYWewq1Ll/YGeozu9B7qJaoXUHAnPIlMIMY0bbW4sQ8CITP5PzNTGgQtgdCW3j8aABPgTDU50Jc7mScvsw1ONcTrmmTNS/QALA3xVVmSZgsMfYIupJLny3V1doLJFVgAoVPt9V5oCqq9aqHPYGbM4wAkHvEE2FszyZ2tNmcARMAGuMtaqzMjN5IzHVe5A1un1MA4S4GjhApgKkvtkVhapeMNAD1gDlyMNt7ky3mbUWMDDRADO1lxUMLHBnXpDL5qUZOfXRWFy2DckkkBjKpr7fgVD2WTzXiL4TA0AAAAAElFTkSuQmCC">
+                            <span class="text nav-text">&nbsp; Surat Masuk</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="suratKeluarSekda">
+                            <img class="base64"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7klEQVR4nO3UMUoEMRSH8aBWFvYW6xkExTusIN7A0itYarlXsNXCVvASNrJn0AV7Czv1JwMZDDszMa4ZsPCDwGNe5v+RF2ZC+OfPgEMs/J4Fpn2CGuEtT32CljvsrDCBbVy1ITlBwyvOsF4QvIZTvKQBOcERHmM9x0EmfBf3ce8zTr4VxHoTM7zhHZfYSvYO9osEybM9PLQXh+O4mlrs7S+981EsyMx48I5+dIKl/gS3cU0y+25WEpTSnArXowkasBFGPMFsqFFLoFdSWdCVlP7sQjcox0UqmCYfUH1BLXxxXi00dAXjhEdB/bHk+ARAzs/uYKbTXwAAAABJRU5ErkJggg==">
+                            <span class="text nav-text">&nbsp; Surat Keluar</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="riwayatSekda" class="active">
+                            <i class='bx bx-copy-alt icon'></i>
+                            <span class="text nav-text">Surat Balasan</span>
+                        </a>
+                    </li>
+                    <hr style="color: white; margin-right: 24px;">
+                    <li class="ms-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-clock-history" viewBox="0 0 16 16" style="color:white;">
+                            <path
+                                d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z" />
+                            <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z" />
+                            <path
+                                d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5" />
+                        </svg>
+                        <span class="text nav-text fw-light">&nbsp; Riwayat</span>
+                    </li>
+                    <ul>
+                        <li class="nav-link">
+                            <a href="disposisiSekda">
+                                <i class='bx bx-sort-up' style="color: white; margin-left: 0.8rem;"></i>
+                                <span class="text nav-text ms-2">Disposisi</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/riwayatAnggotaMagang">
+                                <i class='bx bx-copy-alt icon'></i>
+                                <span class="text nav-text">Anggota</span>
+                            </a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <header class="navbar-atas p-3 mb-3 border-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <div class="dropdown text-end" style="margin-left: auto;">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/img/pp.png" alt="profile" width="32" height="32" class="rounded-circle"
+                                id="profilePicture">
+                        </a>
+                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="/profileSekda">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" type="button" id="logOut">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="ps-4 pe-4">
+            <h4 class="ms-4 fw-bold">Surat Balasan</h4>
+            <h6 class="mt-0 ms-4 mb-5">Menu ini berisikan surat permohonan magang yang harus dibalas.</h6>
+
+            <nav class="nav mb-5">
+                <a class="nav-link active-nav" aria-current="page" href="/riwayatSekda">Diterima</a>
+                <a class="nav-link" href="/riwayatDitolakSekda">Ditolak</a>
+            </nav>
+
+            <div class="mx-auto" style="width: 90%;">
+                <div class="table-responsive">
+                    <table class="table table-hover mx-auto" style="width: 96%;">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="border-top-left-radius: 12px;">No</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Instansi</th>
+                                <th scope="col">Jurusan</th>
+                                <th scope="col">Periode Magang</th>
+                                <th scope="col" style="border-top-right-radius: 12px;">Tindakan</th>
+                            </tr>
+                        </thead>
+                        <tbody id="riwayatDiterima">
+                            <tr>
+                                <td colspan="6" class="text-center">Belum surat permohonan magang yang disetujui</td>
+                            </tr>
+                            <!-- <tr>
+                                <th scope="row">1</th>
+                                <td>Nadia</td>
+                                <td>Universitas Andalas</td>
+                                <td>Sistem Informasi</td>
+                                <td>Silahkan ambil jumat jam 2 wib</td>
+                                <td>
+                                    <a href="balasPenerimaan.html" type="button" class="btn btn-primary">Balas</a>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/API-js/sekda/riwayat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

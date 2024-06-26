@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Surat Balasan Resmi</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 16px;
+        }
+
+        #kop-surat {
+            text-align: center;
+            padding: 1.4% 0;
+        }
+
+        #nomor-surat {
+            text-align: right;
+        }
+
+        #tempat {
+            text-align: left;
+        }
+
+        #isi-surat {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        #ttd {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+
+        #ttd img {
+            width: 80px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body class="100vh p-3">
+    <div id="kop-surat text-center">
+        <table class="table table-borderless">
+            <tbody>
+                <tr>
+                    <td class="text-center"><img 
+                        src="https://1.bp.blogspot.com/-dNePfKfhuCs/Wdw5KVG8BbI/AAAAAAAAEFM/1KeskcMj9OMMCwmoHX0vuOtZkDIsRablwCLcBGAs/s1600/logo+prov+sumatra+barat.png"
+                        style="width: auto; height: 130px;" alt="Logo Pemerintah Provinsi Sumatera Barat"></td>
+                    <td><div class="d-flex flex-column text-center" style="margin-left: -220px;">
+                        <h4 class="mt-2" style="font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing: 1.6px;">PEMERINTAH
+                            PROVINSI
+                            SUMATERA BARAT</h4>
+                        <h2 class="fw-bold mb-2" style="font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing: 1.6px;">
+                            SEKRETARIAT DAERAH</h2>
+                        <p style="font-size: 12px; letter-spacing: 1.2px; margin-top: 14px;">Jalan. Jenderal Sudirman No. 51 Telp. 31401-31402-34425 Padang</p>
+                        <p style="font-size: 12px; letter-spacing: 1.px; margin-top: -10px;">http://www.sumbar.go.id. e-mail:pdeisb@sumbar.go.id</p>
+                    </div></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <hr class="ms-5 me-5" style="border: 2px solid black; color: rgb(0, 0, 0);">
+    <div class="main" style="padding: 0 8%;">
+        <div id="nomor-surat">
+            <p>Padang, {{this.created_at}}</p>
+        </div>
+
+        <div id="tempat">
+            <p>Nomor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{this.nomor_surat}}/874/ORG-{{this.tahun_sekarang}}
+                <br class="mt-1">
+                Sifat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Biasa
+                <br class="mt-1">
+                Lampiran &nbsp;&nbsp;: -
+                <br><br class="mt-1">
+                Hal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Persetujuan Penerimaan Mahasiswa
+                Magang
+            </p>
+        </div>
+
+        <div id="isi-surat">
+            <p class="mt-1">Yth. Ketua Program Studi {{this.jurusan}} {{this.fakultas}} {{this.universitas}}
+                <br class="mt-1">
+                Di
+                <br class="mt-1">
+                Tempat
+            </p>
+            <p style="line-height: 1.8rem">Sehubungan dengan surat dari Ketua Program Studi {{this.jurusan}}
+                {{this.fakultas}}
+                {{this.universitas}} perihal Permohonan Kerja Praktek,
+                bersama ini disampaikan bahwa pada prinsipnya {{this.nama_biro}} Sekretariat Daerah Provinsi Sumatera Barat dapat menerima
+                Mahasiswa {{this.fakultas}} {{this.universitas}} untuk melaksanakan Magang pada {{this.nama_biro}}
+                Sekretariat Daerah Provinsi Sumatera
+                Barat yang dilaksanakan mulai tanggal {{this.periode_magang}} dengan rincian nama sebagai berikut :
+            </p>
+            <br>
+            <div style="margin-right: 100px; margin-left: 100px; align-items: center;">
+                <table class="table table-bordered">
+                    <thead class="text-center">
+                        <tr>
+                            <th class="col-1">No</th>
+                            <th class="col-6">Nama</th>
+                            <th class="col-5">NIM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each mahasiswa}}
+                        <tr>
+                            <td class="text-center">{{this.no}}</td>
+                            <td>{{this.nama}}</td>
+                            <td>{{this.nim}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <p>Demikian disampaikan, atas perhatian dan kerjasamanya diucapkan terima kasih.</p>
+        </div>
+
+        <div id="ttd" class="mt-3">
+            <table class="table table-borderless">
+                <tbody>
+                    <tr>
+                        <td class="col-8"> <input type="hidden"> </td>
+                        <td class="col-4"><div>
+                            <p style="line-height: 1.8rem">Kepala {{this.nama_biro}} Sekretariat Daerah Provinsi Sumatera Barat
+                            </p>
+                            <img src="{{this.ttd_kabir}}" alt="Ttd Digital Kepala Biro" style="width: 180px;">
+                            <p>{{this.nama}}</p>
+                            <p style="margin-top: -8px;">NIP. {{this.nip}}</p>
+                        </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

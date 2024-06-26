@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/admin/dashboard.css">
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text mt-2">
+                <span class="image">
+                    <img src="/img/5.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="name">Siletter</span>
+                    <span class="subname">Sistem Surat Menyurat</span>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right toggle"></i>
+        </header>
+        <div class="menu-bar mt-4">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="/homeUser" class="active">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/suratMasukUser">
+                            <img class="base64"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA6klEQVR4nO2UQQrCMBBFi3UnvYG9RHsJxYWewq1Ll/YGeozu9B7qJaoXUHAnPIlMIMY0bbW4sQ8CITP5PzNTGgQtgdCW3j8aABPgTDU50Jc7mScvsw1ONcTrmmTNS/QALA3xVVmSZgsMfYIupJLny3V1doLJFVgAoVPt9V5oCqq9aqHPYGbM4wAkHvEE2FszyZ2tNmcARMAGuMtaqzMjN5IzHVe5A1un1MA4S4GjhApgKkvtkVhapeMNAD1gDlyMNt7ky3mbUWMDDRADO1lxUMLHBnXpDL5qUZOfXRWFy2DckkkBjKpr7fgVD2WTzXiL4TA0AAAAAElFTkSuQmCC">
+                            <span class="text nav-text">&nbsp; Surat Masuk</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/suratKeluarUser">
+                            <img class="base64"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7klEQVR4nO3UMUoEMRSH8aBWFvYW6xkExTusIN7A0itYarlXsNXCVvASNrJn0AV7Czv1JwMZDDszMa4ZsPCDwGNe5v+RF2ZC+OfPgEMs/J4Fpn2CGuEtT32CljvsrDCBbVy1ITlBwyvOsF4QvIZTvKQBOcERHmM9x0EmfBf3ce8zTr4VxHoTM7zhHZfYSvYO9osEybM9PLQXh+O4mlrs7S+981EsyMx48I5+dIKl/gS3cU0y+25WEpTSnArXowkasBFGPMFsqFFLoFdSWdCVlP7sQjcox0UqmCYfUH1BLXxxXi00dAXjhEdB/bHk+ARAzs/uYKbTXwAAAABJRU5ErkJggg==">
+                            <span class="text nav-text">&nbsp; Surat Keluar</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <header class="navbar-atas p-3 mb-3 border-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <div class="dropdown text-end" style="margin-left: auto;">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/img/pp.png" alt="profile" width="32" height="32" class="rounded-circle"
+                                id="profilePicture">
+                        </a>
+                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="/profileUser">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" type="button" id="logOut">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="halo mx-auto row g-0 position-relative">
+            <div class="col-md-7 p-4 ps-md-0">
+                <h3 class="ms-4 fw-bold">Hello <%= nama%> !</h3>
+                <h5 class="mt-0 ms-4">Selamat datang di Siletter yang akan mebantu proses
+                    surat menyurat anda</h5>
+            </div>
+            <div class="col-md-5 mb-md-0 p-md-4">
+                <img src="/img/8.png" class="img-halo img-fluid" alt="halo">
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 m-3 ms-5 d-flex justify-content-center align-items-center">
+            <div class="col justify-content-center d-flex mb-3">
+                <div class="card" style="background-color: #EFD39C; border-radius: 10px;">
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold">Total Surat Masuk</h4>
+                        <div class="row g-0 position-relative text-center">
+                            <div class="col-md-6 mb-md-0 p-md-4">
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABsElEQVR4nO2XwUrDMBjHf7ibqAOP4ryKN0HwLYa7+ApePXpcj9706iNMBhP2EgqKz+DEm4obeFMihRRKTJs0S5c684MPxtqm///35UsaaB5CiT+HiAYCI2IFAiNiBZahAh1gCMw0A1aNW6CteUcyx5iJSfybB+F1mUhM2R96Fu/TRIIFPqZNHSYSGr6MnZWI71cZKJSBIhOVxKMZYAzsEMZE32UAXQnTvjgFWiyGpGDO6/rnF2WN9AgcEoa2XASMmFaDL+ACWPMobh3YsBBv1ZOq4C7wpPn/BTj2IL4rx38ANg3inQxkGbqU2Vevj4BtB+HpMyOLfSIv3tlAxoHM1DxN3pL36jbMe2Cvgp7KBlJWgJMCAaYm3wfuNM99yuVTlwDvBjK2gGvN/d/AldKUq8B5wRQcG/aZ2gxk9IBnzXMT4EjGpOB6rwY9Tp8SZRm2qVBwA6Y5Ps9GKBZpIN/kU8smbZyB/MnuRkb62xURyoAvRDQQGBErEBgRKxAY8e8qMLP4ngkVHzYG1FNSk2JgY2AXeG+AWKHEa5Wja0ceVvIfZKFiKjPvcu6ORCKRyJLzA/YqYs13SD4BAAAAAElFTkSuQmCC">
+                            </div>
+                            <div class="col-md-6 p-4 ps-md-0">
+                                <h1 class="mt-0" id="totalSM">-</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col justify-content-center d-flex mb-3">
+                <div class="card" style="background-color: #B3CEE1; border-radius: 10px;">
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold">Total Surat Keluar</h4>
+                        <div class="row g-0 position-relative text-center">
+                            <div class="col-md-6 mb-md-0 p-md-4">
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABrElEQVR4nO2YP0vDQBiHH9RJsM6Kf8aOOumXUFRwdnR2c7Rjv4KrYy1F8EOok34ErejmYMDJP68EEgjxktxdr8kd5gcvlJRLn+fu3pAetGnTpk2bNn+zCgyBCJCGKwJGQBcD+DcPwCVXMdOKjsDQA1gpqIGOgA/bRgrqXUcgP+gaWKP+LAEXCp7KqMw/gFNgdvrczADHyWyrWCpTtoT3wNYU4TeA2wqGiQTi+gbOgQWH4PNAH/jU+H1jgV3gSXH9BTh0AL8DPCru/wocuRDIztCXwyYvatJ0hTslPMYCaTaBuwmbvKxJH4BtAx5jgSxAZNHkVRMwZ8FjPWAZuNTYAjpbcN0Bj/WAfeBZMW4M7CU1VnwfjznQuP/PtAWqZlhnhWhyBXT2uG6PNC5A8iQ6yTV5lFyzeRW5qVsg+7/iKqn4s20Wc68XtQm4TCezEkEKpCsRSwQrkEoELUCIAv3QBcRUwkcBMZHwVUB0JXwWEB0J3wWkSsL1wZYOkFhUr0hgFIiAFEl0HR/u1i5Acgo8KDkd80GgRyARRZ0RUCRkeEKHJ3R4QocnpKcN/zK/3/hsf9JIb8oAAAAASUVORK5CYII=">
+                            </div>
+                            <div class="col-md-6 p-4 ps-md-0">
+                                <h1 class="mt-0" id="totalSK">-</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/API-js/mahasiswa/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

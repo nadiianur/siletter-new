@@ -1,0 +1,42 @@
+const anggota_magang = require('./anggota_magang')
+const bagian = require('./bagian')
+const biro = require('./biro')
+const disposisi = require('./disposisi')
+const mahasiswa = require('./mahasiswa')
+const pegawai = require('./pegawai')
+const role = require('./role')
+const surat_masuk = require('./surat_masuk')
+const surat_keluar = require('./surat_keluar')
+
+role.hasMany(pegawai, {foreignKey:'id_role', as: 'dataPegawai'})
+pegawai.belongsTo(role, {foreignKey: 'id_role', as:'dataRole'})
+
+pegawai.hasMany(disposisi, {foreignKey:'id_pegawai', as: 'dataDisposisi'})
+disposisi.belongsTo(pegawai, {foreignKey: 'id_pegawai', as:'dataPegawai'})
+
+bagian.hasMany(pegawai, {foreignKey: 'id_bagian', as: 'dataPegawai'})
+pegawai.belongsTo(bagian, {foreignKey: 'id_bagian', as: 'dataBagian'})
+bagian.hasMany(anggota_magang, {foreignKey: 'id_bagian', as: 'dataAnggotaMagang'})
+anggota_magang.belongsTo(bagian, {foreignKey: 'id_bagian', as: 'dataBagian'})
+
+biro.hasMany(pegawai, {foreignKey: 'id_biro', as: 'dataPegawai'})
+pegawai.belongsTo(biro, {foreignKey: 'id_biro', as: 'dataBiro'})
+biro.hasMany(bagian, {foreignKey: 'id_biro', as: 'dataBagian'})
+bagian.belongsTo(biro, {foreignKey: 'id_biro', as: 'dataBiro'})
+biro.hasMany(surat_masuk, {foreignKey: 'id_biro', as: 'dataSuratMasuk'})
+surat_masuk.belongsTo(biro, {foreignKey: 'id_biro', as: 'dataBiro'})
+biro.hasMany(surat_keluar, {foreignKey: 'id_biro', as: 'dataSuratKeluar'})
+surat_keluar.belongsTo(biro, {foreignKey: 'id_biro', as: 'dataBiro'})
+
+mahasiswa.hasMany(surat_keluar, {foreignKey: 'id_mahasiswa', as: 'dataSuratKeluar'})
+surat_keluar.belongsTo(mahasiswa, {foreignKey: 'id_mahasiswa', as: 'dataMahasiswa'})
+mahasiswa.hasMany(surat_masuk, {foreignKey: 'id_mahasiswa', as: 'dataSuratMasuk'})
+surat_masuk.belongsTo(mahasiswa, {foreignKey: 'id_mahasiswa', as: 'dataMahasiswa'})
+
+surat_masuk.hasMany(disposisi, {foreignKey: 'id_surat_masuk', as: 'dataDisposisi'})
+disposisi.belongsTo(surat_masuk, {foreignKey: 'id_surat_masuk', as: 'dataSuratMasuk'})
+surat_masuk.hasMany(anggota_magang, {foreignKey: 'id_surat_masuk', as: 'dataAnggotaMagang'})
+anggota_magang.belongsTo(surat_masuk, {foreignKey: 'id_surat_masuk', as: 'dataSuratMasuk'})
+
+surat_masuk.hasMany(surat_keluar, {foreignKey: 'id_surat_masuk', as: 'dataSuratKeluar'})
+surat_keluar.belongsTo(surat_masuk, {foreignKey: 'id_surat_masuk', as: 'dataSuratMasuk'})

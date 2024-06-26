@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <title>Surat Keluar</title>
+    <link rel="stylesheet" href="/css/admin/dashboard.css">
+    <link rel="stylesheet" href="/css/admin/divisi.css">
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text mt-2">
+                <span class="image">
+                    <img src="/img/5.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="name">Siletter</span>
+                    <span class="subname">Sistem Surat Menyurat</span>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right toggle"></i>
+        </header>
+        <div class="menu-bar mt-4">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="/homeUser">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/suratMasukUser">
+                            <img class="base64"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA6klEQVR4nO2UQQrCMBBFi3UnvYG9RHsJxYWewq1Ll/YGeozu9B7qJaoXUHAnPIlMIMY0bbW4sQ8CITP5PzNTGgQtgdCW3j8aABPgTDU50Jc7mScvsw1ONcTrmmTNS/QALA3xVVmSZgsMfYIupJLny3V1doLJFVgAoVPt9V5oCqq9aqHPYGbM4wAkHvEE2FszyZ2tNmcARMAGuMtaqzMjN5IzHVe5A1un1MA4S4GjhApgKkvtkVhapeMNAD1gDlyMNt7ky3mbUWMDDRADO1lxUMLHBnXpDL5qUZOfXRWFy2DckkkBjKpr7fgVD2WTzXiL4TA0AAAAAElFTkSuQmCC">
+                            <span class="text nav-text">&nbsp; Surat Masuk</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/suratKeluarUser" class="active">
+                            <img class="base64"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7klEQVR4nO3UMUoEMRSH8aBWFvYW6xkExTusIN7A0itYarlXsNXCVvASNrJn0AV7Czv1JwMZDDszMa4ZsPCDwGNe5v+RF2ZC+OfPgEMs/J4Fpn2CGuEtT32CljvsrDCBbVy1ITlBwyvOsF4QvIZTvKQBOcERHmM9x0EmfBf3ce8zTr4VxHoTM7zhHZfYSvYO9osEybM9PLQXh+O4mlrs7S+981EsyMx48I5+dIKl/gS3cU0y+25WEpTSnArXowkasBFGPMFsqFFLoFdSWdCVlP7sQjcox0UqmCYfUH1BLXxxXi00dAXjhEdB/bHk+ARAzs/uYKbTXwAAAABJRU5ErkJggg==">
+                            <span class="text nav-text">&nbsp; Surat Keluar</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <header class="navbar-atas p-3 mb-3 border-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <div class="dropdown text-end" style="margin-left: auto;">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/img/pp.png" alt="profile" width="32" height="32" class="rounded-circle"
+                                id="profilePicture">
+                        </a>
+                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="/profileUser">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" type="button" id="logOut">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="ps-4 pe-4">
+            <h4 class="ms-4 fw-bold">Surat Keluar</h4>
+            <h6 class="mt-0 ms-4 mb-5">Menu ini untuk melakukan pengirirman surat baru.</h6>
+
+            <div class="d-flex align-items-end justify-content-end me-5 mb-4">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <i class='bx bx-plus'></i>
+                    Kirim Surat
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Kirim Surat</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="kirimSuratForm">
+                                    <h6>Tujuan</h6>
+                                    <div class="input-group mb-3">
+                                        <select class="form-select input-div" aria-label="Default select example"
+                                            id="tujuan">
+                                            <option disabled>Pilih Biro</option>
+                                            <% viewBiro.forEach (data => { %>
+                                            <option value="<%= data.id_biro%>"><%= data.nama_biro%></option>
+                                            <%})%>
+                                        </select>
+                                    </div>
+                                    <h6>Periode Magang </h6>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control form-control-lg fs-6 rounded-4 input-div"
+                                            id="periode_magang" placeholder="Contoh: 1 Januari - 1 Maret 2024 (sesuaikan dengan tanggal pada surat permohonan)">
+                                    </div>
+                                    <h6>Anggota Magang</h6>
+                                    <div class="input-anggota"></div>
+                                    <button type="button" class="btn btn-dark mt-2 mb-3" id="tambahInput"
+                                        style="border-radius: 50px;"><i class='bx bxs-user-plus'></i></button>
+                                    <h6>File Surat</h6>
+                                    <div class="input-group mb-3">
+                                        <input class="form-control input-div" type="file" id="formFile"
+                                            style="height: fit-content;">
+                                    </div>
+                                    <h6>Keterangan</h6>
+                                    <div class="input-group mb-3">
+                                        <textarea class="form-control input-div" id="keterangan" rows="3"
+                                            style="height: fit-content;"></textarea>
+                                    </div>
+                                    <button type="submit" id="btnKirim"
+                                        class="btn btn-primary btn-inmodal mx-auto mb-3">Kirim</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover mx-auto" style="width: 96%;">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="border-top-left-radius: 12px;">No</th>
+                            <th scope="col">Tujuan</th>
+                            <th scope="col">Tanggal</th>
+                            <th scope="col">File Surat</th>
+                            <th scope="col">Detail</th>
+                            <th scope="col" style="border-top-right-radius: 12px;">Tindakan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="suratKeluarBody">
+                        <tr>
+                            <td colspan="6" class="text-center">Belum ada Surat Keluar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Modal untuk file surat -->
+            <div class="modal fade" id="fileModal" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="fileModalLabel">File Surat</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <object id="fileObject" type="application/pdf" width="100%" height="500px"></object>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <h6>Anggota Magang</h6>
+    <div class="input-anggota"></div>
+    <button type="button" class="btn btn-dark mt-2 mb-3" id="tambahInput" style="border-radius: 50px;"><i
+            class='bx bxs-user-plus'></i></button>
+
+    <script>
+        const tambahInputButton = document.getElementById('tambahInput');
+        const divInputAnggota = document.querySelector('.input-anggota');
+        let nomorInput = 2;
+
+        tambahInputButton.addEventListener('click', () => {
+            const divInputBaru = document.createElement('div');
+            divInputBaru.classList.add('row', 'gx-3', 'gy-2', 'align-items-center', 'mt-2', 'mb-2',
+                'anggota-row');
+            divInputBaru.innerHTML = `
+            <div class="col-sm-7">
+                <p style="font-size: 14px;">Nama</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg fs-6 rounded-4 input-div nama" 
+                           placeholder="Ketikkan nama disini" name="nama[]">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <p style="font-size: 14px;">NIM</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg fs-6 rounded-4 input-div nim" 
+                           placeholder="Ketikkan NIM disini" name="nim[]">
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <button type="button" class="btn btn-danger btn-hapus" style="border-radius: 50px;"><i class='bx bxs-trash'></i></button>
+            </div>`;
+            divInputAnggota.appendChild(divInputBaru);
+            nomorInput++;
+        });
+
+        // Event listener untuk tombol hapus
+        divInputAnggota.addEventListener('click', (event) => {
+            if (event.target.classList.contains('btn-hapus')) {
+                event.target.parentElement.parentElement.remove(); // Menghapus div input anggota magang
+            }
+        });
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+2gsNpOp6qL3Cy5KmxTsPqri0EU0LRram5K2Zx4" crossorigin="anonymous"
+        defer></script>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/API-js/mahasiswa/suratKeluar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.input-div{
+    border-radius: 16px;
+    background-color: #EBEBEB; 
+    height: 50px; 
+    border: none;
+  }
+
+  .btn-warning{
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    border-radius: 24px;
+    margin-left: 4px;
+    width: 100px;
+}
+
+.cir{
+  width: 220px; 
+  height: 220px; 
+  z-index: 10;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; 
+}
